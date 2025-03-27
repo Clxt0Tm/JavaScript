@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de letras</title>
+    <title>Contar Letras em String</title>
     <script type="text/javascript" src="js/array.js"></script>
 </head>
 <body>
+    <h1>Contar Quantas Vezes uma Letra Aparece em uma String</h1>
+
+    <label for="texto">Digite a string: </label>
+    <input type="text" id="texto">
     
+    <label for="letra">Digite a letra: </label>
+    <input type="text" id="letra" maxlength="1">
+    
+    <button onclick="contarLetra()">Contar</button>
+    
+    <h2 id="resultado"></h2>
 </body>
 </html>
