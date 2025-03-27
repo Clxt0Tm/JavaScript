@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformar String em Maiúsculas</title>
+</head>
+<body>
+    <h2>Transformar Texto em Maiúsculas</h2>
+
+    <label for="texto">Digite um texto:</label>
+    <input type="text" id="texto">
+    <button onclick="transformarMaiusculas(texto.value)">Transformar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        const transformarMaiusculas = str => {
+            const resultadoMaiusculas = str.toUpperCase();
+
+            document.getElementById("resultado").textContent = "Texto em Maiúsculas: " + resultadoMaiusculas;
+        }
+    </script>
+</body>
+</html>
