@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplos de 5</title>
+</head>
+<body>
+    <h1>Multiplos de 5 de 1 a 100</h1>
+    <div id="resultado"></div>
+    <script>
+        let resultadoDiv = document.getElementById("resultado");
+        let numeros = " ";
+        let i = 1;
+        do{
+            if(i%5==0){
+                numeros += i + "<br>";
+            }
+        }while(i<=100);
+        resultadoDiv.innerHTML = numeros;
+    </script>
+</body>
+</html>
