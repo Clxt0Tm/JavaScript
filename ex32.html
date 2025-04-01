@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>For in</title>
+    <script src="js/dianavictini.js"></script>
+</head>
+<body>
+    <table id="tabelaDados"> <!-- Corrigido para 'tabelaDados' -->
+        <thead>
+            <tr>
+                <th>Chave</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button onclick="interacao()">Ver interação</button>
+    <p id="resultado"></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+const interacao = () => {
+    const produto = {
+        nome: 'Kindle',
+        preco: 499.99,
+        marca: 'Amazon',
+        emEstoque: true 
+    };
+
+    const tabelaDados = document.getElementById('tabelaDados').getElementsByTagName("tbody")[0];
+
+    for (const chave in produto) {
+        const novaLinha = tabelaDados.insertRow();
+        const celulaChave = novaLinha.insertCell();
+        const celulaValor = novaLinha.insertCell();
+
+        celulaChave.textContent = chave;
+        celulaValor.textContent = produto[chave];
+    }
+}
