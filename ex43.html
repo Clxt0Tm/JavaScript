@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Strings</title>
+    <script>
+        function ordenarStrings(arr) {
+            return arr.sort();
+        }
+
+        // Função para testar o código
+        function testarOrdenacao() {
+            const arrayDeStrings = ['banana', 'maçã', 'laranja', 'abacaxi', 'manga'];
+            const resultado = ordenarStrings(arrayDeStrings);
+            document.getElementById('resultado').innerHTML = 'Array ordenado: ' + resultado.join(', ');
+        }
+    </script>
+</head>
+<body>
+    <h1>Ordenar Strings</h1>
+    <p>Click no botão abaixo para ordenar as frutas em ordem alfabética:</p>
+    <button onclick="testarOrdenacao()">Ordenar Frutas</button>
+    
+    <p id="resultado"></p>
+</body>
+</html>

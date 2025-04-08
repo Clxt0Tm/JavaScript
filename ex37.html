@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprimento das Strings</title>
+</head>
+<body>
+
+  <h1>Comprimento das Strings</h1>
+  
+  <label for="strings">Digite um array de strings (separadas por vírgula): </label>
+  <input type="text" id="strings" placeholder="Ex: 'maçã', 'banana', 'abacaxi'">
+  <button onclick="calcularComprimento()">Calcular Comprimento</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function calcularComprimento() {
+      const input = document.getElementById('strings').value;
+      const arr = input.split(',').map(str => str.trim().replace(/['"]+/g, ''));
+
+      const comprimentos = arr.map(str => str.length);
+
+      document.getElementById('resultado').innerText = `Os comprimentos das strings são: ${comprimentos}`;
+    }
+  </script>
+
+</body>
+</html>

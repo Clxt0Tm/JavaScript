@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Salário</title>
+</head>
+<body>
+    <h1>Quem tem o maior salário?</h1>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function pessoaComMaiorSalario(pessoas) {
+            if (pessoas.length === 0) return "Nenhuma pessoa cadastrada.";
+
+            let maiorSalarioPessoa = pessoas[0];
+            
+            for (let i = 1; i < pessoas.length; i++) {
+                if (pessoas[i].salario > maiorSalarioPessoa.salario) {
+                    maiorSalarioPessoa = pessoas[i];
+                }
+            }
+
+            return maiorSalarioPessoa.nome;
+        }
+
+        const pessoas = [
+            { nome: "Maria", salario: 3000 },
+            { nome: "José", salario: 4500 },
+            { nome: "Ana", salario: 5500 },
+            { nome: "Carlos", salario: 4000 }
+        ];
+
+        const nomePessoaComMaiorSalario = pessoaComMaiorSalario(pessoas);
+        document.getElementById("resultado").innerText = `A pessoa com o maior salário é: ${nomePessoaComMaiorSalario}`;
+    </script>
+</body>
+</html>

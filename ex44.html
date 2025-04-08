@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média dos Números Ímpares</title>
+    <script>
+        function mediaImpares(array) {
+            const impares = array.filter(num => num % 2 !== 0);
+
+            if (impares.length === 0) {
+                return 'Não há números ímpares no array';
+            }
+
+            const somaImpares = impares.reduce((acc, num) => acc + num, 0);
+            return somaImpares / impares.length;
+        }
+
+        function exibirResultado() {
+            const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            const resultado = mediaImpares(numeros);
+
+            document.getElementById('resultado').textContent = 'Média dos números ímpares: ' + resultado;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Calcule a Média dos Números Ímpares</h1>
+    
+    <button onclick="exibirResultado()">Calcular Média</button>
+    
+    <p id="resultado"></p>
+
+</body>
+</html>
